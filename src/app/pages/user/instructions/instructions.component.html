@@ -1,0 +1,45 @@
+<div class="bootstrap-wrapper">
+  <div class="contsiner mt20">
+    <div class="row">
+      <div class="col-md-12">
+
+        <mat-card>
+
+            <mat-card-header style="border: 1px solid red; padding: 10px;">
+                <mat-card-title>Important instruction for this quiz - </mat-card-title>
+                <mat-card-subtitle>
+                  <ul>
+                    <li>Please make sure that, this Quiz contains <b>MCQ</b> questions and for the practice purpose only.</li>
+                    <li>You must have to submit the quiz before the time end or withing the time, otherwise this quiz will be submitted automatically.</li>
+                    <li>There are <b>{{quiz.numberOfQuestions}} numbers</b> of questions and the time duration for this quiz is <b>{{quiz.numberOfQuestions*2}} minutes</b>  i.e, 2 mins for each question. </li>
+                    <li>Each question carries <b>{{ quiz.maxMarks/quiz.numberOfQuestions}} marks </b> with no negative marking for the wrong answer.</li>
+                    <li>Please make sure that, You must have your own power supply for use during the examination.</li>
+                    <li>If failure to comply with these recommendations results in technical problems that cause a delay in your examination, you cannot expect to be granted extended time.</li>
+                    <li>You can attemp this quiz any number of time for practice and can increase your knowledge with the help of quiz.</li>
+                    <br>
+                    <li><b>HOW TO ATTEMPT QUIZ</b></li>
+                    <li>Click <b>start</b> button to start the quiz</li>
+                    <li>The Timer will be start once you clickd the start test button</li>
+                    <li>Yes, You can resume the quiz in between the quiz if some interruption occured</li>
+                    <li>Click <b>Next</b> button to move on the next question and <b>Submit</b> to end the test.</li>
+                    <li>The report of the Test will be generated for you in the PDF format and you can download Your <b>REPORT CARD.</b></li>
+                  </ul>
+                </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <h1 class="p10 text-center" style="color: #673ab7;"> {{quiz.title}} Quiz </h1>
+                <p class="text-center">{{quiz.desciption}}</p>
+                <mat-divider></mat-divider>
+            </mat-card-content>
+
+            <mat-card-actions>
+               <div class="container text-center"> <button mat-raised-button color="primary" (click)="startQuiz()">Start QUIZ</button></div>
+            </mat-card-actions>
+
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
+</div>

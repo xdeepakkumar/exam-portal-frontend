@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper" *ngIf="user">
+  <mat-card>
+    <mat-card-header>
+        <mat-card-title>Your Profile Section </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="container">
+        <div class="conatiner text-center">
+          <img src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg" alt="img" class="profile-image responsive-img">
+          <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <table class="table text-center">
+              <tr>
+                <td>Id :</td>
+                <td>EXAM{{user.id}}</td>
+              </tr>
+              <tr>
+                <td>Username :</td>
+                <td>{{user.username}}</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>{{user.phone}}</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>{{user.email}}</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>{{user.authorities[0].authority}}</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>{{user.enabled ? "ACTIVE" : "DISABLED"}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+      <button mat-button mat-raised-button color="primary">UPDATE</button>
+      <button mat-button mat-raised-button color="accent">SHARE</button>
+    </mat-card-actions>
+</mat-card>
+</div>
